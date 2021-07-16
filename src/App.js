@@ -25,6 +25,10 @@ class App extends Component {
     });
   };
 
+  handleClick = (event) => {
+    event.preventDefault();
+  };
+
   render() {
     return (
       <div>
