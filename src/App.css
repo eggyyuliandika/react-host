@@ -13,6 +13,23 @@
   }
 }
 
+h1 {
+  margin: 6px;
+  color: rgb(143, 209, 209);
+}
+
+.input {
+  border-radius: 4px;
+  padding: 4px;
+  margin: 6px;
+}
+
+button {
+  padding: 4px;
+  margin-left: 6px;
+  border-radius: 4px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
