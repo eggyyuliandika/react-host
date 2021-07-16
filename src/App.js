@@ -25,13 +25,6 @@ class App extends Component {
     });
   };
 
-  handleClick = (event) => {
-    event.preventDefault();
-    this.setState({
-      items: [""],
-    });
-  };
-
   render() {
     return (
       <div>
@@ -48,7 +41,7 @@ class App extends Component {
           <button>Add</button>
         </form>
 
-        <form onClick={this.handleClick}>
+        <form>
           <button>Clear</button>
         </form>
 
