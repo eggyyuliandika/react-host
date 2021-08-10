@@ -8,8 +8,6 @@ class App extends Component {
     this.state = {
       todoItem: "",
       items: [],
-      sub: "",
-      subItems: [],
     };
   }
 
@@ -24,19 +22,6 @@ class App extends Component {
   handleChange = (event) => {
     this.setState({
       todoItem: event.target.value,
-    });
-  };
-
-  handleClick = (event) => {
-    this.setState({
-      sub: [...this.state.sub, this.state.subItems],
-      subItems: "",
-    });
-  };
-
-  handleAdd = (event) => {
-    this.setState({
-      subItems: event.target.value,
     });
   };
 

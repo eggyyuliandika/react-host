@@ -14,3 +14,8 @@ button {
   margin-left: 6px;
   border-radius: 4px;
 }
+
+.list {
+  border: black 10px;
+  border-radius: 2px;
+}

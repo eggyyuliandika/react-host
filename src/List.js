@@ -1,12 +1,15 @@
 import React from "react";
+import "./App.css";
 
 function List(props) {
   return (
-    <ul>
-      {props.items.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
+    <div className="list">
+      <ul>
+        {props.items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
