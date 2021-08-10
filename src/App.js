@@ -8,6 +8,8 @@ class App extends Component {
     this.state = {
       todoItem: "",
       items: [],
+      sub: "",
+      subItems: [],
     };
   }
 
@@ -25,10 +27,31 @@ class App extends Component {
     });
   };
 
+  handleClick = (event) => {
+    this.setState({
+      sub: [...this.state.sub, this.state.subItems],
+      subItems: "",
+    });
+  };
+
+  handleAdd = (event) => {
+    this.setState({
+      subItems: event.target.value,
+    });
+  };
+
+  handleDelete = (event) => {
+    event.preventDefault();
+    this.setState({
+      items: [],
+    });
+  };
+
   render() {
     return (
       <div>
         <h1>To-Do List</h1>
+
         <form onSubmit={this.handleSubmit}>
           <input
             className="input"
@@ -36,13 +59,13 @@ class App extends Component {
             onChange={this.handleChange}
             type="text"
             name="name"
-            placeholder="Ketikkan sesuatu..."
+            placeholder="Add your to-do"
           />
           <button>Add</button>
         </form>
 
         <form>
-          <button>Clear</button>
+          <button onClick={this.handleDelete}>Delete All</button>
         </form>
 
         <List items={this.state.items} />
